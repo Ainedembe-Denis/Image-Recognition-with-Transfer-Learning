@@ -26,7 +26,7 @@ This focuses on Neural Networks & Deep Learning, specifically exploring how tran
 - **Image Format**: 32x32 RGB images (3 channels)
 - **Dataset Brief**: See `dataset/Info-about-dataset.pdf` or `dataset/readme.html` for detailed dataset information
 
-### Dataset Structure
+### Dataset Structure ( Note: cifar-10-batches-py folder is ignored >> 177MB )
 ```
 dataset/
 ├── cifar-10-batches-py/
@@ -38,7 +38,8 @@ dataset/
 │   ├── data_batch_5
 │   ├── test_batch
 │   └── readme.html
-└── Info-about-dataset.docx
+├── readme.html
+└── Info-about-dataset.pdf
 ```
 
 ## Dependencies
