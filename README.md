@@ -17,29 +17,21 @@ This focuses on Neural Networks & Deep Learning, specifically exploring how tran
 
 ### CIFAR-10 Dataset
 - **Source**: https://www.cs.toronto.edu/~kriz/cifar.html
-- **Location**: `dataset/cifar-10-batches-py/`
+- **Loading Method**: The dataset is automatically downloaded using TensorFlow's built-in loader (`tf.keras.datasets.cifar10.load_data()`)
 - **Description**: 
   - 60,000 32x32 color images in 10 classes
   - 50,000 training images (5 batches of 10,000 images each)
   - 10,000 test images
   - 10 classes: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
 - **Image Format**: 32x32 RGB images (3 channels)
-- **Dataset Brief**: See `dataset/Info-about-dataset.pdf` or `dataset/readme.html` for detailed dataset information
+- **Automatic Download**: On first run, TensorFlow downloads the dataset (~170MB) from the official source and caches it in `~/.keras/datasets/` (or `C:\Users\<username>\.keras\datasets\` on Windows). Subsequent runs use the cached version.
+- **Dataset Brief**: See `dataset/CIFAR-10 and CIFAR-100 datasets.pdf` or `dataset/readme.html` for detailed dataset information
 
-### Dataset Structure ( Note: cifar-10-batches-py folder is ignored >> 177MB )
+### Dataset Structure
 ```
 dataset/
-├── cifar-10-batches-py/
-│   ├── batches.meta
-│   ├── data_batch_1
-│   ├── data_batch_2
-│   ├── data_batch_3
-│   ├── data_batch_4
-│   ├── data_batch_5
-│   ├── test_batch
-│   └── readme.html
 ├── readme.html
-└── Info-about-dataset.pdf
+└── CIFAR-10 and CIFAR-100 datasets.pdf
 ```
 
 ## Dependencies
@@ -85,8 +77,8 @@ jupyter nbconvert --clear-output --inplace CIFAR10-TransferLearning.ipynb
 The project implements the following 9 tasks:
 
 ### Task 1: Load CIFAR-10 Dataset and Normalize Image Data
-- Load CIFAR-10 dataset from local files
-- Reshape images from flat arrays to (32, 32, 3) format
+- Load CIFAR-10 dataset using TensorFlow's built-in loader (automatically downloads from official source)
+- Visualize sample images from each class
 - Normalize pixel values from [0, 255] to [0, 1]
 - Convert labels to categorical (one-hot encoding)
 - Split training data into train and validation sets (80-20 split)
@@ -158,15 +150,6 @@ The project implements the following 9 tasks:
 ```
 Image-Recognition-with-Transfer-Learning/
 ├── dataset/
-│   ├── cifar-10-batches-py/
-│   │   ├── batches.meta
-│   │   ├── data_batch_1
-│   │   ├── data_batch_2
-│   │   ├── data_batch_3
-│   │   ├── data_batch_4
-│   │   ├── data_batch_5
-│   │   ├── test_batch
-│   │   └── readme.html
 │   ├── readme.html
 │   └── Info-about-dataset.pdf
 ├── screenshots/
