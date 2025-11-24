@@ -2,7 +2,7 @@
 
 This project implements transfer learning for image classification on the CIFAR-10 dataset using pre-trained models (VGG16, ResNet50, MobileNetV2) and compares performance with a custom CNN built from scratch.
 
-##Overview
+## Overview
 
 **Image Recognition with Transfer Learning (CIFAR-10 Dataset)**
 
