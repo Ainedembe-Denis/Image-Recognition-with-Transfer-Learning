@@ -1,0 +1,3 @@
+/dataset/*
+!/dataset/Info-about-dataset.pdf
+!/dataset/readme.html
